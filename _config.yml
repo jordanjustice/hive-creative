@@ -3,7 +3,7 @@ title: Hive Creative
 email: info@hivecreative.co
 description: > # this means to ignore newlines until "baseurl:"
   Hive Creative is sweet. Through world-class photography and simple yet sticky messaging, we help your brand stand out. No matter what you do… we think it should be sweet too.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/hive-creative/" # the subpath of your site, e.g. /blog/
 url: "http://hivecreative.co" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  
