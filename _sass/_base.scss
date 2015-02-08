@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,900);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
 
 @import "normalize";
 
@@ -26,8 +27,10 @@ body {
 }
 
 header {
-  img {
+  .logo {
     display: block;
+    width: 350px;
+    max-width: 100%;
     margin: 2em auto 1em auto;
   }
   h2 {
@@ -81,11 +84,13 @@ header {
 
 #andrew .headshot {
     background: url(http://placehold.it/150x150&text=Andrew) no-repeat;
+    background-size: 100%;
   }
 #samuel {
   @include shift(2);
   .headshot {
-    background: url(http://placehold.it/150x150&text=Samuel) no-repeat; 
+    background: url(http://placehold.it/150x150&text=Samuel) no-repeat;
+    background-size: 100%; 
   }
 }
 
@@ -94,8 +99,56 @@ footer {
   padding: 2em 0;
   background: $gray;
   color: white;
+  text-align: center;
+  a {
+    display: inline-block;
+    color: white;
+    margin: 0 0.5em;
+  }
+  a:first-child {
+    margin-left: 0;
+  }
+   a:last-child {
+    margin-right: 0;
+  }
+  i {
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 30px;
+    line-height: 60px !important;
+    width: 60px !important;
+    font-size: 30px !important;
+  }
   .copyright {
-    text-align: center;
     font-size: .75em;
+  }
+}
+
+@include media($mobile) {
+  body {
+    font-size: 16px;
+  }
+  header {
+    h2 {
+      @include span-columns(4 of 4);
+      @include shift(0);
+    }
+  } 
+  .bio {
+    @include span-columns(4);
+    .headshot {
+      @include span-columns(1 of 4);
+      height: auto;
+      padding-bottom: 21.23932%;
+      border-radius: 50%;
+    }
+    h3, p {
+      text-align: left;
+      @include span-columns(3 of 4);
+      @include omega();
+    }
+  }
+  #samuel {
+    @include shift(0);
   }
 }

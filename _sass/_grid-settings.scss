@@ -1,4 +1,8 @@
 @import "neat/neat-helpers";
 
 $max-width: 940px;
+$gutter: 1em;
 // $visual-grid: true;
+
+
+$mobile: new-breakpoint(max-width 640px 4);
